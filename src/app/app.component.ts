@@ -14,16 +14,21 @@ export class AppComponent {
   count: number = 0;
 
 
-   clickCount() {
-        this.count++;
-        }
+clickCount() {
+  this.count++;
+  }
 
+  colorFunction() {
+    if(true){
+      document.getElementById("log").style.backgroundColor = "green";
+      document.getElementById("log").style.color = "white";
+    }else{
+      document.getElementById("log").style.backgroundColor = "green";
+    }
+ 
   
 }
 
-// const button = document.getElementById("buttonText"),
-//   count = 0;
-// button.onclick = function() {
-//   count += 1;
-//   console.log("Click me: " + count);
-// };
+        
+  
+}

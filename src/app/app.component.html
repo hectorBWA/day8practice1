@@ -1,4 +1,4 @@
-  <button id="buttonText" (click)="clickCount();" onclick="document.getElementById('hiddenText').style.display='block'; document.getElementById('buttonText').innerHTML = 'hide details!';">
+  <button id="buttonText" (click)="clickCount(); colorFunction()" onclick="document.getElementById('hiddenText').style.display='block'; document.getElementById('buttonText').innerHTML = 'hide details!';">
   display details!
   </button>
 
@@ -7,6 +7,6 @@
   [ngStyle]="{'display':'none'}">
   This is a secret sentence.
   </p>
-  <p>
+  <p id="log">
   Button has been clicked {{ count }} times.
   </p>
