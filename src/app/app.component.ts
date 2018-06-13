@@ -9,26 +9,41 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  show: boolean = false;
+  arrs: array<any> = [];
+  time: string = '';
+  state: string = '';
+  
   
 
-  count: number = 0;
-
-
+count: number = 0;
 clickCount() {
   this.count++;
   }
 
-  colorFunction() {
-    if(true){
-      document.getElementById("log").style.backgroundColor = "green";
-      document.getElementById("log").style.color = "white";
+
+  
+
+  displayText(){
+    if(this.show === false){
+this.show = true;
     }else{
-      document.getElementById("log").style.backgroundColor = "green";
+      this.show = !this.show;
     }
+
+    this.pushArr();
+  }
+
+
+  pushArr(){
+    this.arrs.push({
+      time: Date(),
+      state: this.show
+    });
+  }
+
+  
  
   
 }
 
-        
-  
-}
