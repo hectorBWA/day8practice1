@@ -10,16 +10,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
   show: boolean = false;
-  arrs: array<any> = [];
+  arrs: Array<any> = [];
   time: string = '';
   state: string = '';
   
   
 
-count: number = 0;
-clickCount() {
-  this.count++;
-  }
+// count: number = 0;
+// clickCount() {
+//   this.count++;
+//   }
 
 
   
