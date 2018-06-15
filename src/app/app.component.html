@@ -1,12 +1,15 @@
-  <button id="buttonText" (click)="clickCount();" onclick="document.getElementById('hiddenText').style.display='block'; document.getElementById('buttonText').innerHTML = 'hide details!';">
-  display details!
-  </button>
+
+<button id="buttonText" (click)="displayText(); clickCount()" [innerHTML]="show ? 'Hide Details': 'Display Details'">
+display details!
+</button>
+
+<p
+*ngIf="show"> secret paragraph </p>
 
 
-  <p  id="hiddenText" 
-  [ngStyle]="{'display':'none'}">
-  This is a secret sentence.
-  </p>
-  <p>
-  Button has been clicked {{ count }} times.
-  </p>
+<p
+*ngFor="let arr of arrs; index as i;"
+[ngClass]="{'background-green': i >= 9}"
+[ngStyle]="{'color': i >= 9 ? 'white': 'black'}">
+{{ arr.time }}{{ arr.state }} {{ i }}
+</p>

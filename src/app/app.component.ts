@@ -9,21 +9,41 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  show: boolean = false;
+  arrs: Array<any> = [];
+  time: string = '';
+  state: string = '';
+  
   
 
-  count: number = 0;
+// count: number = 0;
+// clickCount() {
+//   this.count++;
+//   }
 
 
-   clickCount() {
-        this.count++;
-        }
+  
 
+  displayText(){
+    if(this.show === false){
+this.show = true;
+    }else{
+      this.show = !this.show;
+    }
+
+    this.pushArr();
+  }
+
+
+  pushArr(){
+    this.arrs.push({
+      time: Date(),
+      state: this.show
+    });
+  }
+
+  
+ 
   
 }
 
-// const button = document.getElementById("buttonText"),
-//   count = 0;
-// button.onclick = function() {
-//   count += 1;
-//   console.log("Click me: " + count);
-// };
